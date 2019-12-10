@@ -40,3 +40,6 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
 
 }
+androidExtensions{
+    experimental = true
+}
