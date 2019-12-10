@@ -13,7 +13,7 @@ data class Note(val id:String,
                 val lastChanged: Date = Date()): Parcelable {
     override fun equals(other: Any?): Boolean {
         if(this===other)return true
-        //if(JavaClass !=other?.JavaClass) return false
+        if(javaClass !=other?.javaClass) return false
 
         other as Note
 
