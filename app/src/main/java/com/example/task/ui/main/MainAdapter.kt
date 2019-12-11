@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.task.R
 import com.example.task.data.model.Note
 
-class MainAdapter: RecyclerView.Adapter<NoteViewHolder>() {
+class MainAdapter(private val onItemClickListener: OnItemClickListener): RecyclerView.Adapter<NoteViewHolder>() {
     var notes:List<Note> = listOf()
     set(value){
         field = value
