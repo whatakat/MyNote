@@ -14,10 +14,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModel: MainViewModel
     lateinit var adapter: MainAdapter
 
-    private fun openNoteScreen(note: Note?){
-        val intent = NoteActivity.getStartIntent(this,note)
-        startActivity(intent)
-    }
+//    private fun openNoteScreen(note: Note?){
+//        val intent = NoteActivity.getStartIntent(this, note)
+//        startActivity(intent)
+//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
 
-        adapter = MainAdapter(object : MainAdapter.onItemClickListener{
-            override fun onItemClick(note: Note){
-                openNoteScreen(note)
-            }
-        })
+//        adapter = MainAdapter(object : MainAdapter.onItemClickListener{
+//            override fun onItemClick(note: Note){
+//                openNoteScreen(note)
+//            }
+//        })
 
 
         viewModel.viewState().observe(this, Observer<MainViewState> {t ->
