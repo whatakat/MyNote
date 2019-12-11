@@ -28,3 +28,6 @@ class MainAdapter: RecyclerView.Adapter<NoteViewHolder>() {
         holder.bind(notes[position])
     }
 }
+interface OnItemClickListener{
+    fun onItemClick(note:Note)
+}
