@@ -5,10 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.example.task.R
 import com.example.task.data.model.Note
-import com.example.task.ui.main.Color
 import kotlinx.android.synthetic.main.activity_note.*
+import kotlinx.android.synthetic.main.activity_note.toolbar
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -22,7 +23,7 @@ class NoteActivity: AppCompatActivity() {
                 putExtra(EXTRA_NOTE, note)
             }
             context.startActivity(intent)
-
+            return intent
         }
     }
 
@@ -32,7 +33,7 @@ class NoteActivity: AppCompatActivity() {
         setContentView(R.layout.activity_note)
 
         note = intent.getParcelableExtra(EXTRA_NOTE)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(toolbar as Toolbar?)//?Toolbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         supportActionBar?.title = if (note != null) {
@@ -48,16 +49,16 @@ class NoteActivity: AppCompatActivity() {
 
     private fun initView() {
         if (note != null) {
-            titleEt.setText(note?.title ?: "")
-            bodyEt.setText(note?.note ?: "")
+            (note?.title ?: "")
+            bodyEt.setText(note?.text ?: "")
             val color = when (note!!.color) {
-                Color.WHITE -> R.color.color_white
-                Color.VIOLET -> R.color.color_violet
-                Color.YELLOW -> R.color.color_yellow
-                Color.RED -> R.color.color_red
-                Color.PINK -> R.color.color_pink
-                Color.GREEN -> R.color.color_green
-                Color.BLUE -> R.color.color_bluet
+                Note.Color.WHITE -> R.color.color_white
+                Note.Color.VIOLET -> R.color.color_violet
+                Note.Color.YELLOW -> R.color.color_yellow
+                Note.Color.RED -> R.color.color_red
+                Note.Color.PINK -> R.color.color_pink
+                Note.Color.GREEN -> R.color.color_green
+                Note.Color.BLUE -> R.color.color_bluet
             }
             toolbar.setBackgroundColor(resources.getColor(color))
         }
