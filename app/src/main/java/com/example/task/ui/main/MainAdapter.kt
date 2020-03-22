@@ -8,7 +8,7 @@ import android.widget.TextView
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.task.R
-import com.example.task.data.model.Note
+import com.example.task.data.model.entity.Note
 
 class MainAdapter(private val onItemClickListener: OnItemClickListener): RecyclerView.Adapter<MainAdapter.NoteViewHolder>() {
     var notes:List<Note> = listOf()
@@ -52,5 +52,5 @@ class MainAdapter(private val onItemClickListener: OnItemClickListener): Recycle
 
 }
 interface OnItemClickListener{
-    fun onItemClick(note:Note)
+    fun onItemClick(note: Note)
 }

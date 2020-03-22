@@ -1,4 +1,4 @@
-package com.example.task.data.model
+package com.example.task.data.model.entity
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
