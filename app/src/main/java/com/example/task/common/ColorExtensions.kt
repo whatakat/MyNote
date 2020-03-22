@@ -3,7 +3,7 @@ package com.example.task.common
 import android.content.Context
 import androidx.core.content.ContextCompat
 import com.example.task.R
-import com.example.task.data.model.entity.Note
+import com.example.task.data.entity.Note
 
 fun Note.Color.getColorInt(context: Context) = ContextCompat.getColor(
     context, getColorRes()

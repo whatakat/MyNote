@@ -1,6 +1,6 @@
 package com.example.task.data
-import com.example.task.data.model.entity.Note
-import com.example.task.data.model.entity.Note.Color
+import com.example.task.data.entity.Note
+import com.example.task.data.entity.Note.Color
 import java.util.*
 
 object Repository{

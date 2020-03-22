@@ -7,7 +7,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.task.R
-import com.example.task.data.model.entity.Note
+import com.example.task.data.entity.Note
 import kotlinx.android.synthetic.main.activity_note.*
 import kotlinx.android.synthetic.main.activity_note.toolbar
 import java.text.SimpleDateFormat
