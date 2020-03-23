@@ -8,11 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.task.R
 import com.example.task.data.errors.NoAuthException
 import com.firebase.ui.auth.AuthUI
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.channels.consumeEach
 
 abstract class BaseActivity<T> : AppCompatActivity(), CoroutineScope {
     companion object {
