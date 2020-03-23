@@ -10,11 +10,11 @@ fun Note.Color.getColorInt(context: Context) = ContextCompat.getColor(
 )
 
 fun Note.Color.getColorRes(): Int = when (this) {
-    Note.Color.WHITE -> R.color.color_white
-    Note.Color.YELLOW -> R.color.color_yellow
-    Note.Color.GREEN -> R.color.color_green
-    Note.Color.BLUE -> R.color.color_bluet
-    Note.Color.RED -> R.color.color_red
-    Note.Color.VIOLET -> R.color.color_violet
-    Note.Color.PINK -> R.color.color_pink
+    Note.Color.WHITE -> R.color.white
+    Note.Color.YELLOW -> R.color.yellow
+    Note.Color.GREEN -> R.color.green
+    Note.Color.BLUE -> R.color.bluet
+    Note.Color.RED -> R.color.red
+    Note.Color.VIOLET -> R.color.violet
+    Note.Color.PINK -> R.color.pink
 }
