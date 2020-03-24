@@ -3,6 +3,7 @@ package com.example.task.ui.splash
 import android.os.Handler
 import com.example.task.ui.base.BaseActivity
 import com.example.task.ui.main.MainActivity
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class SplashActivity : BaseActivity<Boolean?>() {
 
