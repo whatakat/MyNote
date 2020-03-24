@@ -14,6 +14,7 @@ import com.example.task.data.entity.Note
 import com.example.task.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_note.toolbar
 import org.jetbrains.anko.alert
+import org.koin.android.viewmodel.ext.android.viewModel
 import java.util.*
 import kotlin.contracts.ExperimentalContracts
 
